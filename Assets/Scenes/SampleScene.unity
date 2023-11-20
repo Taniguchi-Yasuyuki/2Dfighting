@@ -216,8 +216,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1020982699}
+  - component: {fileID: 1020982700}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,14 +231,27 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020982698}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.07087, y: -2.1152694, z: 0.030533768}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.04, y: 1.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1946668131}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1020982700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020982698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68c8b36ad4c41744a9509f2fdf0c434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HadoukenPrefab: {fileID: 5640900838736528200, guid: 26c4d6388bba92a4188c86fe0cb698ee, type: 3}
 --- !u!1 &1025966791
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +447,8 @@ Transform:
   m_LocalPosition: {x: -4.27, y: -2.32, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1020982699}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -450,14 +465,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_LinearDrag: 3
+  m_AngularDrag: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1946668133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,7 +485,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11f6622e01fe46439231ff84509b21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 500
+  jumpForce: 1000
+  moveSpeed: 3
 --- !u!58 &1946668134
 CircleCollider2D:
   m_ObjectHideFlags: 0
