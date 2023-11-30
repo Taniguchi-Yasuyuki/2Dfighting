@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    //Hadouken（弾）のプレハブを呼び出す
+    // Hadouken（弾）のプレハブを呼び出す
     public GameObject HadoukenPrefab;
+
+    // HadoukenPrefab に Rigidbody2D がアタッチされている前提
+    public float hadoukenSpeed = 10f;
 
     // Update is called once per frame
     void Update()
     {
-        //Vが押されたらHadouken（弾）のプレハブが出現する
+        // Vが押されたらHadouken（弾）のプレハブが出現する
         if (Input.GetKeyDown(KeyCode.V))
         {
-            Instantiate(HadoukenPrefab, transform.position, Quaternion.identity);
+            GameObject hadouken = Instantiate(HadoukenPrefab, transform.position, Quaternion.identity);
+
+            // 弾の初期速度を設定
+            Rigidbody2D hadoukenRB = hadouken.GetComponent<Rigidbody2D>();
+            if (hadoukenRB != null)
+            {
+                hadoukenRB.velocity = new Vector2(-hadoukenSpeed, 0f);
+            }
         }
     }
 }
