@@ -408,7 +408,6 @@ GameObject:
   - component: {fileID: 1946668130}
   - component: {fileID: 1946668132}
   - component: {fileID: 1946668134}
-  - component: {fileID: 1946668135}
   - component: {fileID: 1946668136}
   m_Layer: 0
   m_Name: 'RYU_Player '
@@ -522,21 +521,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 17.539999
---- !u!114 &1946668135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946668129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47272fdcdde11a24c9c64ccf34861da2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5640900838736528200, guid: 26c4d6388bba92a4188c86fe0cb698ee, type: 3}
-  firePoint: {fileID: 1020982699}
-  bulletSpeed: 10
 --- !u!114 &1946668136
 MonoBehaviour:
   m_ObjectHideFlags: 0

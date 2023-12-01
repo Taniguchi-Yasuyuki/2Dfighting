@@ -18,11 +18,15 @@ public class SpawnPoint : MonoBehaviour
         {
             GameObject hadouken = Instantiate(HadoukenPrefab, transform.position, Quaternion.identity);
 
+            // プレイヤーの向きを取得
+            float playerDirection = transform.localScale.x;
+
             // 弾の初期速度を設定
             Rigidbody2D hadoukenRB = hadouken.GetComponent<Rigidbody2D>();
             if (hadoukenRB != null)
             {
-                hadoukenRB.velocity = new Vector2(-hadoukenSpeed, 0f);
+                // プレイヤーの向きに応じて初期速度を設定
+                hadoukenRB.velocity = new Vector2(hadoukenSpeed * playerDirection, 0f);
             }
         }
     }
