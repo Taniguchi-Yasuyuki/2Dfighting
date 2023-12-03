@@ -284,6 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HadoukenPrefab: {fileID: 5640900838736528200, guid: 26c4d6388bba92a4188c86fe0cb698ee, type: 3}
   hadoukenSpeed: 10
+  spawnPoint: {fileID: 1020982699}
 --- !u!1 &1025966791
 GameObject:
   m_ObjectHideFlags: 0
