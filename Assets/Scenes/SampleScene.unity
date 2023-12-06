@@ -247,7 +247,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1020982699}
-  - component: {fileID: 1020982700}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -270,21 +269,6 @@ Transform:
   m_Father: {fileID: 1946668131}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1020982700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020982698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b68c8b36ad4c41744a9509f2fdf0c434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HadoukenPrefab: {fileID: 5640900838736528200, guid: 26c4d6388bba92a4188c86fe0cb698ee, type: 3}
-  hadoukenSpeed: 10
-  spawnPoint: {fileID: 1020982699}
 --- !u!1 &1025966791
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +394,7 @@ GameObject:
   - component: {fileID: 1946668132}
   - component: {fileID: 1946668134}
   - component: {fileID: 1946668136}
+  - component: {fileID: 1946668137}
   m_Layer: 0
   m_Name: 'RYU_Player '
   m_TagString: Untagged
@@ -536,6 +521,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 1000
   moveSpeed: 3
+--- !u!114 &1946668137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946668129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68c8b36ad4c41744a9509f2fdf0c434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HadoukenPrefab: {fileID: 5640900838736528200, guid: 26c4d6388bba92a4188c86fe0cb698ee, type: 3}
+  hadoukenSpeed: 100
+  spawnPoint: {fileID: 1020982699}
 --- !u!1 &2080689091
 GameObject:
   m_ObjectHideFlags: 0
